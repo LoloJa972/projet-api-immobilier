@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prédiction Immobilière</title>
+</head>
+<body>
+    <h2>Formulaire de prédiction</h2>
+    <form method="post" action="/predict_form">
+        Surface: <input type="number" step="any" name="surface"><br>
+        Chambres: <input type="number" name="chambres"><br>
+        Quartier: <input type="text" name="quartier"><br>
+        <button type="submit">Prédire</button>
+    </form>
+    {% if prediction %}
+        <h3>Résultat de la prédiction : {{ prediction }}</h3>
+    {% endif %}
+</body>
+</html>
